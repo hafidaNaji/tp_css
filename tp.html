@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP CSS</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            margin: 0;
+            height: 100vh;
+            background-color: #143306;
+        }
+
+        .container {
+            
+            display: grid;
+            place-items: center;
+            background-color: #143306;
+            border: 19px solid white;
+            box-shadow: 0 0 50px black;
+            cursor: pointer;
+            
+        }
+
+
+       #box {
+            border: 1px solid gray;
+            height: 200px;
+            width: 200px;
+            margin: 40px;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 500ms;
+        }
+
+        .box1, .box2 {
+            height: 100%;
+            width: 100%;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            transition: transform 900ms;
+            
+        }
+       
+
+        .box1 {
+            border-radius: 0px 200px 0px 0px;
+            background-color: rgb(168, 212, 74);
+        }
+
+        .box2 {
+            border-radius: 0px 0px 0px 200px;
+            background-color: rgb(218, 137, 208);
+        }
+
+        .cercle {
+            border: 3px solid black;
+            height: 5px;
+            display: grid;
+            place-items: center;
+            margin: 10px 0;
+            border-radius: 10px;
+            background-color: white;
+            width: 80%;
+            transition: transform 500ms;
+        }
+
+        .container:hover .box1 {
+            transform: rotate(90deg);
+        }
+
+        .container:hover .box2 {
+            transform: rotate(90deg);
+        }
+        
+        .container:hover .cercle {
+            transform: rotate(540deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1" id="box"></div>
+        <div class="cercle"></div>
+        <div class="box2" id="box"></div>
+    </div>
+</body>
+
+</html>
